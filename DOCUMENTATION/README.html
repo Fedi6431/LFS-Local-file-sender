@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>LFS-Local File Sender</title>
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    p,
+    code {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #e0e0e0;
+      padding: 2px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    .codeBlock {
+      background: #eee;
+      padding: 5px;
+      display: block;
+      border-left: 3px solid #007BFF;
+      margin: 10px 0;
+    }
+
+    .center {
+      text-align: center;
+      align-content: center;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+
+    .warn {
+      color: rgb(255, 115, 0);
+      font-weight: bold;
+    }
+
+    ul.index {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul.index li {
+      margin: 5px 0;
+    }
+
+    ul.index a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>LFS-Local File Sender</h1>
+    <h2>Index</h2>
+    <ul class="index">
+      <li>
+        <a href="#description">Description</a>
+      </li>
+      <li>
+        <a href="#installation">Installation</a>
+      </li>
+      <li>
+        <a href="#usage">Usage</a>
+      </li>
+      <li>
+        <a href="#errors">Errors</a>
+      </li>
+      <li>
+        <a href="#warnings">Warnings</a>
+      </li>
+      <li>
+        <a href="#bug-report">Report a bug</a>
+      </li>
+      <li>
+        <a href="#credits">Credits</a>
+      </li>
+    </ul>
+    <div id="description">
+      <h2>Description</h2>
+      <p>The program Local File Sender or more simple LFS is a java program made with Swing.<br>
+        The propuse of it is to send file of all dimension to a pc from another with IPv4.<br>
+        It's a very user friendly program because all the option are visible and if something or some input is wrong,
+        the program throw an GUI error with JOptionPane.<br>
+        Why i made it?<br>
+        Becuase i wanted to send a file from my local pc to another local pc, but i saw that none made a program like
+        that (maybe because is useless <strong>:/</strong> ).</p>
+      <div class="center"><img src="images/SenderPanel.png"
+          alt="Screenshoot of the main page of the program (Sender Panel)"></div>
+    </div>
+    <div id="installation">
+      <h2>Installation</h2>
+      <h3>Windows</h3>
+      <ol>
+        <li>Ensure you have <a href="https://openjdk.org/projects/jdk/17/">open JDK</a> or <a
+            href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java installed</a>
+          (version 17 or higher)</li>
+        <li>Download the code for the <a href="https://github.com/Fedi6431/LFS-Local-File-sender/releases">official
+            github
+            page</a> <code>https://github.com/Fedi6431/LFS-Local-File-sender/releases</code>
+          <br>
+          You can use git with the command <code>git clone https://github.com/Fedi6431/LFS-Local-File-sender.git</code>
+          or <code>git pull https://github.com/Fedi6431/LFS-Local-File-sender.git</code>
+          <br>
+          But you can download it directly for the github page.
+          <br>
+        </li>
+      </ol>
+    </div>
+    <div id="usage">
+      <h2>Usage</h2>
+      <p>To use the <strong>jar</strong> program, go in the <code>out\artifacts\</code> and execute the command</p>
+      <code class="codeBlock">java -jar LFS.jar</code>
+      <br>
+      <p>To use the <strong>java</strong> program, go in the <code>src\</code> and execute the command</p>
+      <code class="codeBlock">java LFS.java</code>
+    </div>
+    <div id="errors">
+      <h2>Errors</h2>
+      <div>
+        <p>Possible error messages that the user may see in the program:</p>
+        <ul>
+          <div>
+            <li class="error">Exception</li>
+            <p>Depends of what Exception is triggered in the program (Message in the panel when the exception happend).
+            </p>
+          </div>
+          <div>
+            <li class="error">Invalid ip</li>
+            <p>Triggered when the ip that the user want to set is invalid.</p>
+          </div>
+          <div>
+            <li class="error">Invalid file path</li>
+            <p>Triggered when the user want send a file but the path isn't specified/selected.</p>
+          </div>
+          <div>
+            <li class="error">Invalid Input</li>
+            <p>Triggered when the user write an invalid input for the port instead of a port number (integer).</p>
+          </div>
+        </ul>
+      </div>
+      <div>
+        <p>Possible errors that the user may see in the log:</p>
+        <ul>
+          <div>
+            <li class="error">FileNotFoundException</li>
+            <p>Occurs when the specified file does not exist.</p>
+          </div>
+          <div>
+            <li class="error">NullPointerException</li>
+            <p>Occurs when a program attempts to use an object reference that has not been initialized.</p>
+          </div>
+          <div>
+            <li class="error">UnknownHostException</li>
+            <p>Occurs when the IP address of a host could not be determined.</p>
+          </div>
+          <div>
+            <li class="error">IOException</li>
+            <p>Occurs when an input or output operation fails or is interrupted.</p>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 id="warnings">Warnings</h2>
+      <p>Possible warn that can be showed in the program</p>
+      <ul>
+        <div>
+          <li class="warn">Sender service</li>
+          <p>The "sender service" isn't an error, is only the sender status service. But it can warn you if another
+            sender
+            thread is active and you want active another one.</p>
+        </div>
+        <div>
+          <li class="warn">Server service</li>
+          <p>The "server service" isn't an error, is only the server status service (like the sender service). But it
+            can warn you if another server thread is active.</p>
+        </div>
+        <div>
+          <li class="warn">SocketTimeoutException</li>
+          <p>Triggered if the connection max timeout is reached or if the server is unavaible (so the client can't reach
+            the server and the timeout start)</p>
+        </div>
+      </ul>
+    </div>
+    <div id="bug-report">
+      <h2>Report a bug</h2>
+      <p>Did you find a bug?
+        <br>
+        <a href="https://github.com/Fedi6431/LFS-Local-File-sender/pulls">Make a pull!</a>
+        <br>
+        <a href="https://github.com/Fedi6431/LFS-Local-File-sender/issues">Make a new issue!</a>
+      </p>
+    </div>
+    <div id="credits">
+      <h2>Credits</h2>
+      <P>This will be a very long list XD</P>
+      <h3>Java developer: <a href="https://github.com/Fedi6431">Fedi6431</a></h3>
+      <h3>Html developer: <a href="https://github.com/Fedi6431">Fedi6431</a></h3>
+      <h3>Creator: <a href="https://github.com/Fedi6431">Fedi6431</a></h3>
+    </div>
+  </div>
+  <footer>
+    © Fedi6431
+  </footer>
+</body>
+
+</html>
