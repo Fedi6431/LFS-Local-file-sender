@@ -18,7 +18,7 @@ It's a very user friendly program because all the option are visible and if some
 Why i made it?  
 Becuase i wanted to send a file from my local pc to another local pc, but i saw that none made a program like that (maybe because is useless **:/** ).
 
-![Screenshoot of the main page of the program (Sender Panel)](images/SenderPanel.png)
+![Screenshoot of the main page of the program (Sender Panel)](DOCUMENTATION/images/SenderPanel.png)
 
 ## Installation
 
